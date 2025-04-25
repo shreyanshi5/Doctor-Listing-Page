@@ -1,0 +1,108 @@
+.doctor-card {
+  display: flex;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-image {
+  flex: 0 0 150px;
+  margin-right: 1.5rem;
+}
+
+.doctor-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #e2e8f0;
+}
+
+.doctor-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-info h3 {
+  margin: 0 0 0.5rem;
+  color: #2d3748;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.doctor-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.specialties {
+  color: #4a5568;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.experience {
+  color: #718096;
+  font-size: 0.95rem;
+}
+
+.fees {
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.book-appointment-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+  width: fit-content;
+}
+
+.book-appointment-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.book-appointment-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4);
+}
+
+@media (max-width: 640px) {
+  .doctor-card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .doctor-image {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    align-self: center;
+  }
+
+  .doctor-info {
+    text-align: center;
+  }
+
+  .book-appointment-btn {
+    align-self: center;
+    width: 100%;
+  }
+} 

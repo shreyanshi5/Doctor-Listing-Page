@@ -1,0 +1,170 @@
+.filters-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 280px;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.filter-section {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.75rem 0;
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.filter-section:first-child {
+  padding-top: 0;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-header:hover {
+  opacity: 0.8;
+}
+
+.filter-header h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+
+.expand-icon {
+  color: #718096;
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.clear-all {
+  color: #4299e1;
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.clear-all:hover {
+  text-decoration: underline;
+}
+
+.search-box {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.specialty-search {
+  width: 100%;
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.search-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #718096;
+}
+
+/* Specialties section specific styling */
+.filter-section:nth-child(3) .filter-options {
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-right: -8px; /* Compensate for padding to align with other sections */
+}
+
+/* Custom scrollbar styling - only for specialties section */
+.filter-section:nth-child(3) .filter-options::-webkit-scrollbar {
+  width: 4px;
+}
+
+.filter-section:nth-child(3) .filter-options::-webkit-scrollbar-track {
+  background: #f7fafc;
+  border-radius: 4px;
+}
+
+.filter-section:nth-child(3) .filter-options::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+.filter-section:nth-child(3) .filter-options::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Regular filter options without scroll */
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.radio-label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #4a5568;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.radio-label input[type="radio"],
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Custom radio button styling */
+.radio-label input[type="radio"] {
+  accent-color: #4299e1;
+}
+
+/* Custom checkbox styling */
+.checkbox-label input[type="checkbox"] {
+  accent-color: #4299e1;
+}
+
+/* Hover states */
+.radio-label:hover,
+.checkbox-label:hover {
+  color: #2d3748;
+}
+
+/* Focus states for accessibility */
+.specialty-search:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filters-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+} 
